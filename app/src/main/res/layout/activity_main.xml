@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/wellcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Bem Vindo ao Clock In Reminder"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/hourInitial"
+        android:layout_width="278dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="184dp"
+        android:ems="10"
+        android:hint="Informe a Entrada (ex 08:00)"
+        android:inputType="text"
+        android:textColor="#5C5470"
+        android:textColorHint="#5C5470"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hourInterval"
+        android:layout_width="278dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Informe o Intervalo (ex 09:35)"
+        android:inputType="text"
+        android:textColor="#5C5470"
+        android:textColorHint="#5C5470"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourInitial" />
+    <EditText
+        android:id="@+id/hourReturn"
+        android:layout_width="278dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Informe o Retorno (ex 10:35)"
+        android:inputType="text"
+        android:textColor="#5C5470"
+        android:textColorHint="#5C5470"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourInterval" />
+
+    <EditText
+        android:id="@+id/hourExit"
+        android:layout_width="278dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Informe a Saída (ex 18:00)"
+        android:inputType="text"
+        android:textColor="#5C5470"
+        android:textColorHint="#5C5470"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourReturn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Iniciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourExit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
