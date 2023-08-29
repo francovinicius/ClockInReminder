@@ -23,65 +23,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <Spinner
         android:id="@+id/hourInitial"
-        android:layout_width="278dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="220dp"
-        android:ems="10"
-        android:hint="Informe a Entrada (ex 08:00)"
-        android:inputType="text"
-        android:textColor="#E9EAEA"
-        android:textColorHint="#E9EAEA"
+        android:layout_width="269dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="68dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/time_array"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/information" />
 
-    <EditText
+    <Spinner
         android:id="@+id/hourInterval"
-        android:layout_width="278dp"
-        android:layout_height="42dp"
+        android:layout_width="269dp"
+        android:layout_height="47dp"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Informe o Intervalo (ex 09:35)"
-        android:inputType="text"
-        android:textColor="#E9EAEA"
-        android:textColorHint="#E9EAEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintTop_toBottomOf="@+id/hourInitial"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hourInitial" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:entries="@array/time_array" />
 
-    <EditText
+    <Spinner
         android:id="@+id/hourReturn"
-        android:layout_width="278dp"
-        android:layout_height="42dp"
+        android:layout_width="269dp"
+        android:layout_height="47dp"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Informe o Retorno (ex 10:35)"
-        android:inputType="text"
-        android:textColor="#E9EAEA"
-        android:textColorHint="#E9EAEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintTop_toBottomOf="@+id/hourInterval"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hourInterval" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:entries="@array/time_array" />
 
-    <EditText
+    <Spinner
         android:id="@+id/hourExit"
-        android:layout_width="278dp"
-        android:layout_height="42dp"
+        android:layout_width="269dp"
+        android:layout_height="47dp"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Informe a Saída (ex 18:00)"
-        android:inputType="text"
-        android:textColor="#E9EAEA"
-        android:textColorHint="#E9EAEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintTop_toBottomOf="@+id/hourReturn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hourReturn" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:entries="@array/time_array" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/calcular"
@@ -94,15 +81,25 @@
         app:layout_constraintTop_toBottomOf="@+id/hourExit" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logo"
         android:layout_width="117dp"
         android:layout_height="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949"
+        app:layout_constraintVertical_bias="0.902"
         app:srcCompat="@drawable/logo_transp" />
+
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insira as informações abaixo:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wellcome" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
