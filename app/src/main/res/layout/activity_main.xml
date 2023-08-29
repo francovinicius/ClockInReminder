@@ -12,83 +12,39 @@
         android:id="@+id/wellcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="40dp"
         android:text="Seja Bem Vindo ao App"
         android:textAllCaps="false"
         android:textColor="#2D3D45"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/hourInitial"
-        android:layout_width="269dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="68dp"
-        android:background="@android:drawable/btn_dropdown"
-        android:entries="@array/time_array"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/information" />
-
-    <Spinner
-        android:id="@+id/hourInterval"
-        android:layout_width="269dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:drawable/btn_dropdown"
-        app:layout_constraintTop_toBottomOf="@+id/hourInitial"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:entries="@array/time_array" />
-
-    <Spinner
-        android:id="@+id/hourReturn"
-        android:layout_width="269dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:drawable/btn_dropdown"
-        app:layout_constraintTop_toBottomOf="@+id/hourInterval"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:entries="@array/time_array" />
-
-    <Spinner
-        android:id="@+id/hourExit"
-        android:layout_width="269dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:drawable/btn_dropdown"
-        app:layout_constraintTop_toBottomOf="@+id/hourReturn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:entries="@array/time_array" />
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/calcular"
+        android:id="@+id/iniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:background="#282828"
         android:text="Iniciar"
+        android:textColor="#F5F1F1"
+        app:layout_constraintBottom_toTopOf="@+id/logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hourExit" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="117dp"
-        android:layout_height="155dp"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902"
+        app:layout_constraintVertical_bias="0.952"
         app:srcCompat="@drawable/logo_transp" />
 
     <TextView
@@ -96,10 +52,249 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Insira as informações abaixo:"
+        android:textColor="#2D3D45"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wellcome" />
+
+    <TextView
+        android:id="@+id/txtInicio"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Informe o horário de entrada"
+        android:textColor="#2D3D45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/information" />
+
+    <TextView
+        android:id="@+id/separacao1"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="#2D3D45"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInicio" />
+
+    <EditText
+        android:id="@+id/txtHrInicio"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/separacao1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInicio" />
+
+    <EditText
+        android:id="@+id/txtMnInicio"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/separacao1"
+        app:layout_constraintTop_toBottomOf="@+id/txtInicio" />
+
+
+    <TextView
+        android:id="@+id/txtIntervalo"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Informe o inicio do intervalo"
+        android:textColor="#2D3D45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInicio" />
+
+    <TextView
+        android:id="@+id/separacao2"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="#2D3D45"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntervalo" />
+
+    <EditText
+        android:id="@+id/txtHrIntervalo"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/separacao1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntervalo" />
+
+    <EditText
+        android:id="@+id/txtMnIntervalo"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/separacao1"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntervalo" />
+
+    <TextView
+        android:id="@+id/txtRetorno"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="Informe o retorno do intervalo"
+        android:textColor="#2D3D45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntervalo" />
+
+    <TextView
+        android:id="@+id/separacao3"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="#2D3D45"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRetorno" />
+
+    <EditText
+        android:id="@+id/txtHrRetorno"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/separacao1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRetorno" />
+
+    <EditText
+        android:id="@+id/txtMnRetorno"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/separacao1"
+        app:layout_constraintTop_toBottomOf="@+id/txtRetorno" />
+
+    <TextView
+        android:id="@+id/txtSaida"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="Informe o fim da jornada"
+        android:textColor="#2D3D45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRetorno" />
+
+    <TextView
+        android:id="@+id/separacao4"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="#2D3D45"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaida" />
+
+    <EditText
+        android:id="@+id/txtHrSaida"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/separacao1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaida" />
+
+    <EditText
+        android:id="@+id/txtMnSaida"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/separacao1"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaida" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
