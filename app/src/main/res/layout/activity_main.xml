@@ -4,31 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/wellcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Bem Vindo ao Clock In Reminder"
+        android:layout_marginTop="88dp"
+        android:text="Seja Bem Vindo ao App"
+        android:textAllCaps="false"
+        android:textColor="#2D3D45"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
         android:id="@+id/hourInitial"
         android:layout_width="278dp"
         android:layout_height="42dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="220dp"
         android:ems="10"
         android:hint="Informe a Entrada (ex 08:00)"
         android:inputType="text"
-        android:textColor="#5C5470"
-        android:textColorHint="#5C5470"
+        android:textColor="#E9EAEA"
+        android:textColorHint="#E9EAEA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,12 +46,13 @@
         android:ems="10"
         android:hint="Informe o Intervalo (ex 09:35)"
         android:inputType="text"
-        android:textColor="#5C5470"
-        android:textColorHint="#5C5470"
+        android:textColor="#E9EAEA"
+        android:textColorHint="#E9EAEA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hourInitial" />
+
     <EditText
         android:id="@+id/hourReturn"
         android:layout_width="278dp"
@@ -56,8 +61,8 @@
         android:ems="10"
         android:hint="Informe o Retorno (ex 10:35)"
         android:inputType="text"
-        android:textColor="#5C5470"
-        android:textColorHint="#5C5470"
+        android:textColor="#E9EAEA"
+        android:textColorHint="#E9EAEA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,8 +76,8 @@
         android:ems="10"
         android:hint="Informe a Saída (ex 18:00)"
         android:inputType="text"
-        android:textColor="#5C5470"
-        android:textColorHint="#5C5470"
+        android:textColor="#E9EAEA"
+        android:textColorHint="#E9EAEA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,5 +92,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hourExit" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="117dp"
+        android:layout_height="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949"
+        app:srcCompat="@drawable/logo_transp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
